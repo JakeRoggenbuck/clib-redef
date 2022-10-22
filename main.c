@@ -1,6 +1,5 @@
-/* #include "C_string.h" */
+#include "C_string.h"
 #include <stdio.h>
-#include <string.h>
 
 void output_test_strcmp(int c, char *name1, char *name2) {
     if (c > 0) {
@@ -14,6 +13,8 @@ void output_test_strcmp(int c, char *name1, char *name2) {
 }
 
 int test_strcmp() {
+    printf("TEST STRCMP\n");
+    printf("======================\n");
     char name1[5] = "Jake";
     char name2[5] = "Adam";
     int c = strcmp(name1, name2);
@@ -39,7 +40,21 @@ int test_strcmp() {
     int g = strcmp(name9, name0);
     output_test_strcmp(d, name9, name0);
 
-    printf("Adam is cooler tho.\n");
+    printf("Adam is cooler tho.\n\n");
 }
 
-int main() { test_strcmp(); }
+void test_strcpy() {
+    printf("TEST STRCPY\n");
+    printf("======================\n");
+    char *name = "JakeRoggenbuck";
+
+    char into[100];
+
+    strcpy(into, name);
+    printf("%s\n", into);
+}
+
+int main() {
+    test_strcmp();
+    test_strcpy();
+}

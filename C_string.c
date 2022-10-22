@@ -15,3 +15,14 @@ int strcmp(const char *a, const char *b) {
     return *a - *b;
 }
 
+char *strcpy(char *dest, const char *src) {
+    // keep the original start of dest
+    char *tmp = dest;
+    while (*src) {
+        // Copy one part to the next
+        *dest = *src;
+        dest++;
+        src++;
+    }
+    return tmp;
+}
